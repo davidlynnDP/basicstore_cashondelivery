@@ -11,6 +11,7 @@ import { useContext, useState } from 'react'
 import { CartContext } from '@/context/cart'
 import { useRouter } from 'next/router'
 import { ICartProduct } from '@/interfaces/cart'
+import { mattresses } from '@/data'
 
 
 interface Props {
@@ -93,8 +94,8 @@ const MattressesBySlugPage: NextPage<Props> = ({ product }) => {
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
 
-    const { data } = await gistApi.get<Product[]>('/mattresses.json');
-    const mattressesSlug: string[] = data.map( product => product.slug ); 
+    //const { data } = await gistApi.get<Product[]>('/mattresses.json');
+    const mattressesSlug: string[] = mattresses.map( product => product.slug ); 
 
     return {
       paths: mattressesSlug.map( slug => ({
