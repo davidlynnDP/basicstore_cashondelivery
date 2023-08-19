@@ -1,0 +1,92 @@
+
+
+.ct_checkout {
+    margin: 100px;
+}
+
+.ct_form {
+    padding: 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.pg_dark {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.563rem;
+    font-weight: 600;
+    
+    align-self: start;
+}
+
+.pg_dark::before {
+    content: url('/icons/user.svg');
+    margin-right: 10px;
+}
+
+.pg_info {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: start;
+}
+
+.pg_info::before {
+    content: url('/icons/asterisco.svg');
+    margin-right: 10px;
+}
+
+.form {
+    width: 500px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.input {
+    width: 320px;
+    height: 30px;
+    background: transparent;
+    padding: 0 10px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.submit {
+    width: 250px;
+    height: 40px;
+
+    background: rgb(60, 60, 60);
+    border-radius: 5px;
+    border: transparent;
+    color: white;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.submit:hover {
+    background: transparent;
+    border: 1px solid black;
+    color: black;
+}

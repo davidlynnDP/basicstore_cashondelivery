@@ -1,0 +1,107 @@
+
+
+.ct_info {
+    width: 40%;
+    height: max-content;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+
+/**/
+.ct_desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: start;
+}
+
+.price {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: start;
+}
+
+.sizes {
+    width: 130px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 30px;
+}
+
+/**/
+.ct_buy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+
+}
+
+.btn_cart {
+    align-self: center;
+
+    width: 200px;
+    height: 35px;
+    background: rgb(100, 100, 100);
+    color: white;
+    border-radius: 5px;
+    border: transparent;
+    margin-bottom: 20px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.btn_cart:hover {
+    background: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid black;
+}
+
+.title_small {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: start;
+}
+
+.list {
+    list-style-type: none;
+    list-style-image: url('/icons/check.svg');
+    list-style-position: inside;
+}
+
+.tag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.813rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}

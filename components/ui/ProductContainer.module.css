@@ -1,0 +1,12 @@
+
+
+.ct_product{
+    margin: 50px;
+    max-width: 100vw;
+    max-height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

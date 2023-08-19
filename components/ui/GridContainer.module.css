@@ -1,0 +1,14 @@
+
+
+.ct_container {
+    margin: 0 50px;
+
+}
+
+.ct_grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}

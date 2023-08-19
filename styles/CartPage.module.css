@@ -1,0 +1,15 @@
+
+
+.ct_cart {
+    margin: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ct_list {
+    width: 45vw;
+    height: max-content;
+}
