@@ -24,7 +24,7 @@ export const CardProduct: React.FC<Props> = ({ product }) => {
 
   const { images, tags, title, description, type } = product;
 
-  const limited = description.length > 125 ? `${ description[0].substring(0, 125) } ...` : description[0];
+  const limited = description[0].length > 125 ? `${ description[0].substring(0, 125) }...` : description[0];
 
   return (
     <div className={ styles.card }>

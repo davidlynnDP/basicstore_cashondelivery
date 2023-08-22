@@ -47,4 +47,31 @@
     font-weight: 600;
 
 }
+
+
+@media screen and (max-width:800px){
+
+     
+    .pg_copyright {
+        font-size: 1rem;
+    }
+
+    .pg_copyright_light {
+        font-size: 0.875rem;
+    }
+
+    .copyright_pg {
+        font-size: 0.875rem;
+    }
+    
+}
+ 
+@media screen and (max-width:350px){
+
+     
+    .ct_footer {
+        padding: 50px 10px;
+    }
+    
+}
  

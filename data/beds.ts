@@ -1,10 +1,11 @@
 import { Product } from '@/interfaces'
-import bedsJson from './beds.json';
+import { v4 as uuid } from 'uuid';
 
 
 
 const beds: Product[] = [
     {
+        "id": uuid(),
         "description": [
             "Descubre la elegancia y comodidad definitivas con nuestra Base Cama Cón Cabecero de primera calidad. Diseñada para brindarte noches de sueño reparador, esta base cama combina un diseño contemporáneo con una construcción robusta.",
             "El cabecero acolchado agrega un toque de lujo, mientras que el soporte de alto rendimiento asegura una distribución uniforme del peso.",
@@ -38,6 +39,7 @@ const beds: Product[] = [
         "type": "beds"
     },
     {
+        "id": uuid(),
         "description": [
             "Eleva tu descanso a un nuevo nivel de confort con nuestra Base Cama Cón Cabecero. Diseñada meticulosamente para fusionar estilo y funcionalidad, esta base cama de alta calidad es un testimonio de artesanía excepcional.",
             "El cabecero acolchado brinda apoyo a la vez que añade un toque de sofisticación a tu espacio. Su construcción sólida y duradera asegura años de uso satisfactorio.",
@@ -71,6 +73,7 @@ const beds: Product[] = [
         "type": "beds"
     },
     {
+        "id": uuid(),
         "description": [
             "Bienestar y valor se unen en nuestra Base Cama Cón Cabecero de excelencia. Experimenta el lujo cotidiano con esta base cama que ofrece tanto estilo como sustancia.",
             "El cabecero ergonómico brinda un apoyo cómodo mientras le da un toque de diseño a tu habitación. Construida con materiales de calidad superior, esta base cama promete durabilidad a largo plazo.",
@@ -104,6 +107,7 @@ const beds: Product[] = [
         "type": "beds"
     },
     {
+        "id": uuid(),
         "description": [
             "Redescubre el placer de descansar con nuestra Base Cama Cón Cabecero de prestigio. Diseñada con atención meticulosa a los detalles, esta base cama eleva la estética y la practicidad de tu dormitorio.",
             "El cabecero acolchado te envuelve en comodidad, mientras que la construcción resistente asegura una base duradera para tus sueños. Disfruta de noches serenas y despiértate renovado cada día.",
@@ -137,6 +141,7 @@ const beds: Product[] = [
         "type": "beds"
     },
     {
+        "id": uuid(),
         "description": [
             "Descubre la perfección del descanso con nuestra Base Cama de excelencia.",
             " Diseñada con los mejores materiales para durabilidad y confort inigualables. El soporte de alta calidad y el diseño elegante se combinan para brindarte un oasis de sueño.",
@@ -168,6 +173,7 @@ const beds: Product[] = [
         "type": "beds"
     },
     {
+        "id": uuid(),
         "description": [
             "Eleva tu sueño a nuevas alturas con nuestra Base Cama premium. Fabricada con materiales de primera calidad, esta base ofrece un soporte confiable y duradero.",
             "El diseño moderno y el precio accesible hacen que sea la elección ideal para una comodidad excepcional sin comprometer tu presupuesto."
@@ -198,6 +204,7 @@ const beds: Product[] = [
         "type": "beds"
     },
     {
+        "id": uuid(),
         "description": [
             "Experimenta el lujo asequible con nuestra Base Cama de calidad superior.",
             "Su construcción sólida y diseño elegante transforman tu habitación en un refugio de relajación.",
@@ -230,6 +237,7 @@ const beds: Product[] = [
         "type": "beds"
     },
     {
+        "id": uuid(),
         "description": [
             "Tu descanso perfecto comienza con nuestra Base Cama de alta gama.",
             "Diseñada meticulosamente para proporcionar confort y estabilidad. El cabecero acolchado y los materiales premium crean un ambiente de serenidad en tu dormitorio. ",

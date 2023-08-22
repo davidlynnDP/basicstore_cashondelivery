@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 
 import { CartContext } from '@/context/cart';
 import { ShoppingList, OrderSummary } from '@/components/cart';
+import { RootLayout } from '@/components/layouts/RootLayout';
 
 import styles from '../../styles/CartPage.module.css'
-
 
 
 const CartPage = () => {
@@ -24,19 +24,22 @@ const CartPage = () => {
     }
 
   return (
- 
-    <div className={ styles.ct_cart }>
-      <div className={ styles.ct_list }>
-        {
-          cart.map( product => (
-            <ShoppingList key={ product.id } product={ product }/>
-          )) 
-        }
+
+    <RootLayout>
+      <div className={ styles.ct_cart }>
+
+        <div className={ styles.ct_list }>
+          {
+            cart.map( product => (
+              <ShoppingList key={ product.id } product={ product }/>
+            )) 
+          }
+        </div>
+
+        <OrderSummary cartInfo />
+
       </div>
-
-      <OrderSummary cartInfo />
-
-    </div>
+    </RootLayout>
 
   )
 

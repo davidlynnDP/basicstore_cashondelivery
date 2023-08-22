@@ -1,18 +1,17 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next'
+import { useContext, useState } from 'react'
 
-import { gistApi } from '@/api'
 import { Product } from '@/interfaces'
 import { formatCurrency, getBedBySlug } from '@/utils'
 import { ResponsiveCarousel } from '@/components/carousel/ResponsiveCarousel'
 import { ProductContainer } from '@/components/ui/ProductContainer'
-
-import styles from '../../styles/BedsAndMattressesBySlug.module.css'
-import { useContext, useState } from 'react'
 import { ICartProduct } from '@/interfaces/cart'
 import { CartContext } from '@/context/cart'
 import { useRouter } from 'next/router'
 import { beds } from '@/data'
+import { RootLayout } from '@/components/layouts/RootLayout'
 
+import styles from '../../styles/BedsAndMattressesBySlug.module.css'
 
 interface Props {
   product: Product,
@@ -55,6 +54,8 @@ const BedsBySlugPage: NextPage<Props> = ({ product }) => {
 
     return (
 
+      <RootLayout>
+
         <ProductContainer>
 
             <ResponsiveCarousel images={ product.images }/>
@@ -86,6 +87,8 @@ const BedsBySlugPage: NextPage<Props> = ({ product }) => {
             </div>
 
         </ProductContainer>
+
+      </RootLayout>
     )
 }
 
@@ -94,7 +97,6 @@ const BedsBySlugPage: NextPage<Props> = ({ product }) => {
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
-    //const { data } = await gistApi.get<Product[]>('/beds.json');
     const bedsSlug: string[] = beds.map( product => product.slug ); 
 
     return {

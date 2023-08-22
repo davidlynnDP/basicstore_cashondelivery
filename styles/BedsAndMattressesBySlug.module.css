@@ -105,3 +105,49 @@
     font-weight: 400;
     margin-bottom: 10px;
 }
+
+
+@media screen and (max-width:1150px){
+  
+    .ct_info{
+        width: 60%;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:650px){
+  
+    .ct_info{
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width:500px){
+  
+    .title {
+        font-size: 1.25rem;
+    }
+    
+    .description {
+        font-size: 0.875rem;
+    }
+
+    .price {
+        font-size: 1.125rem;
+    }
+    
+
+    .title_small {
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width:400px){
+  
+    .ct_info{
+        width: 100%;
+        padding: 0 10px;
+    }
+}

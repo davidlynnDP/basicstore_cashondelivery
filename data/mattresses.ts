@@ -1,8 +1,10 @@
 import { Product } from '@/interfaces';
+import { v4 as uuid } from 'uuid';
 
 
 const mattresses: Product[] = [
     {
+        "id": uuid(),
         "description": [
             "Experimenta el lujo del descanso con nuestro colchón semiortopédico. Diseñado para brindar soporte y confort incomparables, este colchón combina materiales de alta calidad con un precio accesible.",
             "La firmeza adaptable alivia tus tensiones mientras duermes plácidamente. No renuncies a la calidad ni a tu presupuesto. Descubre el secreto de un sueño renovador con nuestro colchón semiortopédico premium."
@@ -37,6 +39,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Descansa como nunca antes con nuestro colchón semiortopédico de alta gama a un precio que te sorprenderá.",
             "Este colchón fusiona la suavidad y el soporte en una experiencia única. La tecnología de espuma de calidad y la firmeza equilibrada promueven una postura óptima. Duerme tranquilo sabiendo que has invertido en un descanso de calidad excepcional sin exceder tu presupuesto."
@@ -71,6 +74,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Descubre el colchón semiortopédico perfecto para tu confort y bolsillo.",
             "Nuestra creación de calidad superior ofrece noches de sueño inigualables. La combinación de capas de espuma y diseño semiortopédico brindan soporte y comodidad al mejor precio.",
@@ -106,6 +110,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Descansa como nunca antes con nuestro colchón semiortopédico de alta gama a un precio que te sorprenderá. Este colchón fusiona la suavidad y el soporte en una experiencia única.",
             "Nuestra creación de calidad superior ofrece noches de sueño inigualables. La combinación de capas de espuma y diseño semiortopédico brindan soporte y comodidad al mejor precio.",
@@ -141,6 +146,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Experimenta el lujo del descanso con nuestro colchón semiortopédico. Diseñado para brindar soporte y confort incomparables, este colchón combina materiales de alta calidad con un precio accesible.",
             "La firmeza adaptable alivia tus tensiones mientras duermes plácidamente. No renuncies a la calidad ni a tu presupuesto. Descubre el secreto de un sueño renovador con nuestro colchón semiortopédico premium."
@@ -174,6 +180,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Descansa como nunca antes con nuestro colchón semiortopédico de alta gama a un precio que te sorprenderá.",
             "Este colchón fusiona la suavidad y el soporte en una experiencia única. La tecnología de espuma de calidad y la firmeza equilibrada promueven una postura óptima. Duerme tranquilo sabiendo que has invertido en un descanso de calidad excepcional sin exceder tu presupuesto."
@@ -207,6 +214,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Descubre el colchón semiortopédico perfecto para tu confort y bolsillo.",
             "Nuestra creación de calidad superior ofrece noches de sueño inigualables. La combinación de capas de espuma y diseño semiortopédico brindan soporte y comodidad al mejor precio.",
@@ -241,6 +249,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Descansa como nunca antes con nuestro colchón semiortopédico de alta gama a un precio que te sorprenderá. Este colchón fusiona la suavidad y el soporte en una experiencia única.",
             "Nuestra creación de calidad superior ofrece noches de sueño inigualables. La combinación de capas de espuma y diseño semiortopédico brindan soporte y comodidad al mejor precio.",
@@ -275,6 +284,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Descubre el máximo confort con nuestro Colchón Super Pillow de calidad premium.",
             "Experimenta una capa extra de acolchado que abraza tu cuerpo, brindando una sensación de lujo. Fabricado con materiales de alta calidad, este colchón ofrece un soporte ergonómico que alivia tensiones y mejora la postura.",
@@ -312,6 +322,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Sumérgete en la suavidad y comodidad con nuestro Colchón Super Pillow.",
             "La capa acolchada adicional te envuelve en un abrazo de lujo, mientras que el soporte firme cuida de tu bienestar.",
@@ -349,6 +360,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Eleva tu descanso con nuestro Colchón Super Pillow de máxima calidad.",
             "La capa extra de acolchado proporciona un confort excepcional, mientras que la tecnología de soporte ergonómico mejora tu postura y alivia tensiones.",
@@ -386,6 +398,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Duerme en las nubes con nuestro Colchón Super Pillow premium a un precio que te sorprenderá.",
             "La capa adicional de acolchado ofrece una experiencia de descanso sin igual, mientras que el soporte firme cuida de tu salud postural. Con materiales de alta gama, este colchón te brinda confort de élite a un precio asequible.",
@@ -423,6 +436,7 @@ const mattresses: Product[] = [
         "type": "mattresses"
     },
     {
+        "id": uuid(),
         "description": [
             "Despliega el confort excepcional con nuestro Colchón Super Pillow plegable, la joya de nuestra colección.",
             "Este colchón en forma de libro combina la suavidad de la capa acolchada con la practicidad de la portabilidad.",

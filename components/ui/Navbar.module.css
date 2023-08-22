@@ -77,5 +77,19 @@
     width: 30px;
 }
 
+@media screen and (max-width:750px){
+
+    .ct_categories {
+        display: none;
+    }
+}
+
+@media screen and (max-width:400px){
+
+    .ct_funcs {
+        display: none;
+    }
+}
+
 
 

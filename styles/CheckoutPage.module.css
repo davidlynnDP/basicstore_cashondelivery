@@ -90,3 +90,60 @@
     border: 1px solid black;
     color: black;
 }
+
+@media screen and (max-width:875px){
+    .ct_checkout {
+        margin: 100px 50px;
+    }
+
+}
+
+@media screen and (max-width:650px){
+    .ct_checkout {
+        margin: 100px 25px;
+    }
+
+    
+    .form {
+        width: 300px;
+
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:650px){
+    .ct_checkout {
+        margin: 100px 25px;
+    }
+
+    
+    .form {
+        width: 300px;
+
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .ct_checkout {
+        margin: 100px 15px;
+    }
+
+    .pg_dark {
+        font-size: 1.25rem;
+    }
+    
+    .pg_info {
+        font-size: 1.125rem;
+    }
+
+    .ct_form {
+        padding: 20px 0;
+    }
+
+    .form {
+        width: 275px;
+    }
+}

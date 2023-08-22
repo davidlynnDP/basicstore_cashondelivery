@@ -1,6 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
 import { shuffle } from 'underscore';
-import { v4 as uuid } from 'uuid';
 
 import { RootLayout } from '@/components/layouts/RootLayout'
 import { Product } from '@/interfaces'
@@ -36,19 +35,12 @@ const HomePage: NextPage<Props> = ({ products }) => {
 
 //Static Site Generation (SSG)
 export const getStaticProps: GetStaticProps = async (ctx) => {
-
-  //const { data: responseBeds } = await gistApi.get<Product[]>('/beds.json');
-  //const { data: responseMattresses } = await gistApi.get<Product[]>('/mattresses.json');
-
+  
   const shuffleProducts = shuffle([ ...mattresses, ...beds ]);
-  const products: Product[] = shuffleProducts.map( product => ({
-    id: uuid(),
-    ...product
-  }));
 
   return {
     props: {
-      products
+      products: shuffleProducts
     }
   };
 }

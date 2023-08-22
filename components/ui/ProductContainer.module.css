@@ -1,12 +1,43 @@
 
 
 .ct_product{
-    margin: 50px;
-    max-width: 100vw;
-    max-height: 100vh;
+    /* margin: 50px; */
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 50px;
 }
+
+@media screen and (max-width:1300px){
+  
+    .ct_product{
+        margin: 0 50px;
+    }
+}
+
+@media screen and (max-width:1150px){
+  
+    .ct_product{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:800px){
+  
+    .ct_product{
+        margin: 0 25px;
+
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width:400px){
+  
+    .ct_product{
+        margin: 0 15px;
+    }
+}
+

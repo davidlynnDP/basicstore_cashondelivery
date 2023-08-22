@@ -1,6 +1,33 @@
 
 
 .ct_carousel {
-    width: 50vw;
-    height: 80vh;
+    width: 700px;
+}
+
+@media screen and (max-width:1300px){
+  
+    .ct_carousel {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width:800px){
+  
+    .ct_carousel {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:800px){
+  
+    .ct_carousel {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:500px){
+  
+    .ct_carousel {
+        width: 300px;
+    }
 }

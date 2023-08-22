@@ -12,3 +12,53 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+
+@media screen and (max-width:1050px) {
+    .ct_container {
+        margin: 0 100px;
+    
+    }
+
+    .ct_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width:750px) {
+    .ct_container {
+        margin: 0 200px;
+    
+    }
+
+    .ct_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width:675px) {
+    .ct_container {
+        margin: 0 150px;
+    
+    }
+}
+
+@media screen and (max-width:575px) {
+    .ct_container {
+        margin: 0 100px;
+    
+    }
+}
+
+@media screen and (max-width:475px) {
+    .ct_container {
+        margin: 0 50px;
+    
+    }
+}
+
+@media screen and (max-width:475px) {
+    .ct_container {
+        margin: 0 25px;
+    
+    }
+}

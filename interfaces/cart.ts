@@ -3,7 +3,7 @@ import { ValidSizes, ValidTypes } from './products';
 
 // de esta manera luce un unico producto en el carrito de compras
 export interface ICartProduct {
-    id?: string;
+    id: string;
     image: string;
     price: number;
     size: ValidSizes;
