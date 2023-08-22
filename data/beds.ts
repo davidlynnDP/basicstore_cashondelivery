@@ -1,5 +1,6 @@
 import { Product } from '@/interfaces'
 import { v4 as uuid } from 'uuid';
+import { bedsCombo, bedsOnly, shuffleImages } from './shuffleImages'
 
 
 
@@ -19,12 +20,7 @@ const beds: Product[] = [
             "Garantía de satisfacción para que puedas comprar con confianza",
             "Envío rápido y confiable"
         ],
-        "images": [
-            "/images/beds/base-cama+cabecero-1.webp",
-            "/images/beds/base-cama+cabecero-2.webp",
-            "/images/beds/base-cama+cabecero-3.webp",
-            "/images/beds/base-cama+cabecero-4.webp"
-        ],
+        "images": shuffleImages( bedsCombo ),
         "price": 600000,
         "sizes": "100cm x 190cm",
         "slug": "base-cama-con-cabecero-sencilla-100cm-x-190cm-customizable",
@@ -53,12 +49,7 @@ const beds: Product[] = [
             "Garantía de satisfacción para que puedas comprar con confianza",
             "Envío rápido y confiable"
         ],
-        "images": [
-            "/images/beds/base-cama+cabecero-1.webp",
-            "/images/beds/base-cama+cabecero-2.webp",
-            "/images/beds/base-cama+cabecero-3.webp",
-            "/images/beds/base-cama+cabecero-4.webp"
-        ],
+        "images": shuffleImages( bedsCombo ),
         "price": 600000,
         "sizes": "120cm x 190cm",
         "slug": "base-cama-con-cabecero-semidoble-120cm-x-190cm-customizable",
@@ -87,12 +78,7 @@ const beds: Product[] = [
             "Garantía de satisfacción para que puedas comprar con confianza",
             "Envío rápido y confiable"
         ],
-        "images": [
-            "/images/beds/base-cama+cabecero-1.webp",
-            "/images/beds/base-cama+cabecero-2.webp",
-            "/images/beds/base-cama+cabecero-3.webp",
-            "/images/beds/base-cama+cabecero-4.webp"
-        ],
+        "images": shuffleImages( bedsCombo ),
         "price": 600000,
         "sizes": "140cm x 190cm",
         "slug": "base-cama-con-cabecero-doble-140cm-x-190cm-customizable",
@@ -121,12 +107,7 @@ const beds: Product[] = [
             "Garantía de satisfacción para que puedas comprar con confianza",
             "Envío rápido y confiable"
         ],
-        "images": [
-            "/images/beds/base-cama+cabecero-1.webp",
-            "/images/beds/base-cama+cabecero-2.webp",
-            "/images/beds/base-cama+cabecero-3.webp",
-            "/images/beds/base-cama+cabecero-4.webp"
-        ],
+        "images": shuffleImages( bedsCombo ),
         "price": 600000,
         "sizes": "160cm x 190cm",
         "slug": "base-cama-con-cabecero-queen-160cm-x-190cm-customizable",
@@ -155,10 +136,7 @@ const beds: Product[] = [
             "Garantía de satisfacción para que puedas comprar con confianza",
             "Envío rápido y confiable"
         ],
-        "images": [
-            "/images/beds/base-cama-1.webp",
-            "/images/beds/base-cama-2.webp"
-        ],
+        "images": shuffleImages( bedsOnly ),
         "price": 250000,
         "sizes": "100cm x 190cm",
         "slug": "base-cama-sencilla-100cm-x-190cm-customizable",
@@ -186,10 +164,7 @@ const beds: Product[] = [
             "Garantía de satisfacción para que puedas comprar con confianza",
             "Envío rápido y confiable"
         ],
-        "images": [
-            "/images/beds/base-cama-1.webp",
-            "/images/beds/base-cama-2.webp"
-        ],
+        "images": shuffleImages( bedsOnly ),
         "price": 250000,
         "sizes": "120cm x 190cm",
         "slug": "base-cama-semidoble-120cm-x-190cm-customizable",
@@ -218,11 +193,7 @@ const beds: Product[] = [
             "Garantía de satisfacción para que puedas comprar con confianza",
             "Envío rápido y confiable"
         ],
-        "images": [
-            "/images/beds/base-cama-custom-1.webp",
-            "/images/beds/base-cama-custom-2.webp",
-            "/images/beds/base-cama-custom-3.webp"
-        ],
+        "images": shuffleImages( bedsOnly ),
         "price": 250000,
         "sizes": "140cm x 190cm",
         "slug": "base-cama-doble-140cm-x-190cm-customizable",
@@ -251,11 +222,7 @@ const beds: Product[] = [
             "Garantía de satisfacción para que puedas comprar con confianza",
             "Envío rápido y confiable"
         ],
-        "images": [
-            "/images/beds/base-cama-custom-1.webp",
-            "/images/beds/base-cama-custom-2.webp",
-            "/images/beds/base-cama-custom-3.webp"
-        ],
+        "images": shuffleImages( bedsOnly ),
         "price": 250000,
         "sizes": "160cm x 190cm",
         "slug": "base-cama-queen-160cm-x-190cm-customizable",

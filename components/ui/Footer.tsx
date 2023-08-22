@@ -20,7 +20,7 @@ export const Footer = () => {
 
       <div className={ styles.ct_copyright }>
         <img src="/icons/copyright.svg" alt="Copyright icon" className={ styles.copyright_img } />
-        <p className={ styles.copyright_pg }>{ year } - Tu sue&ntilde;o armonioso</p>
+        <p className={ styles.copyright_pg }>{ year } - Muebles Jireh</p>
       </div>   
 
     </div>

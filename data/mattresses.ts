@@ -1,5 +1,6 @@
 import { Product } from '@/interfaces';
 import { v4 as uuid } from 'uuid';
+import { whiteSemiOrthopedicMattresses, blackSemiOrthopedicMattresses, cassataClinicalMattresses, superPillowTopMattresses, premiumFoldingSuperPillowsMattresses, shuffleImages } from './shuffleImages'
 
 
 const mattresses: Product[] = [
@@ -18,13 +19,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/semiortopedico-blanco-1.webp",
-            "/images/mattresses/semiortopedico-blanco-2.webp",
-            "/images/mattresses/semiortopedico-blanco-3.webp",
-            "/images/mattresses/semiortopedico-blanco-4.webp",
-            "/images/mattresses/semiortopedico-blanco-5.webp"
-        ],
+        "images": shuffleImages( whiteSemiOrthopedicMattresses ),
         "price": 550000,
         "sizes": "100cm x 190cm",
         "slug": "colchon-sencillo-original-blanco-100cm-x-190cm-x-20cm",
@@ -53,13 +48,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/semiortopedico-blanco-1.webp",
-            "/images/mattresses/semiortopedico-blanco-2.webp",
-            "/images/mattresses/semiortopedico-blanco-3.webp",
-            "/images/mattresses/semiortopedico-blanco-4.webp",
-            "/images/mattresses/semiortopedico-blanco-5.webp"
-        ],
+        "images": shuffleImages( whiteSemiOrthopedicMattresses ),
         "price": 620000,
         "sizes": "120cm x 190cm",
         "slug": "colchon-semidoble-original-blanco-120cm-x-190cm-x-20cm",
@@ -89,13 +78,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/semiortopedico-blanco-1.webp",
-            "/images/mattresses/semiortopedico-blanco-2.webp",
-            "/images/mattresses/semiortopedico-blanco-3.webp",
-            "/images/mattresses/semiortopedico-blanco-4.webp",
-            "/images/mattresses/semiortopedico-blanco-5.webp"
-        ],
+        "images": shuffleImages( whiteSemiOrthopedicMattresses ),
         "price": 680000,
         "sizes": "140cm x 190cm",
         "slug": "colchon-doble-original-blanco-140cm-x-190cm-x-20cm",
@@ -125,13 +108,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/semiortopedico-blanco-1.webp",
-            "/images/mattresses/semiortopedico-blanco-2.webp",
-            "/images/mattresses/semiortopedico-blanco-3.webp",
-            "/images/mattresses/semiortopedico-blanco-4.webp",
-            "/images/mattresses/semiortopedico-blanco-5.webp"
-        ],
+        "images": shuffleImages( whiteSemiOrthopedicMattresses ),
         "price": 750000,
         "sizes": "160cm x 190cm",
         "slug": "colchon-queen-original-blanco-160cm-x-190cm-x-20cm",
@@ -160,12 +137,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/semiortopedico-negro-1.webp",
-            "/images/mattresses/semiortopedico-negro-2.webp",
-            "/images/mattresses/semiortopedico-negro-3.webp",
-            "/images/mattresses/semiortopedico-negro-4.webp"
-        ],
+        "images": shuffleImages( blackSemiOrthopedicMattresses ),
         "price": 550000,
         "sizes": "100cm x 190cm",
         "slug": "colchon-sencillo-original-negro-100cm-x-190cm-x-20cm",
@@ -194,12 +166,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/semiortopedico-negro-1.webp",
-            "/images/mattresses/semiortopedico-negro-2.webp",
-            "/images/mattresses/semiortopedico-negro-3.webp",
-            "/images/mattresses/semiortopedico-negro-4.webp"
-        ],
+        "images": shuffleImages( blackSemiOrthopedicMattresses ),
         "price": 620000,
         "sizes": "120cm x 190cm",
         "slug": "colchon-semidoble-original-negro-120cm-x-190cm-x-20cm",
@@ -229,12 +196,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/semiortopedico-negro-1.webp",
-            "/images/mattresses/semiortopedico-negro-2.webp",
-            "/images/mattresses/semiortopedico-negro-3.webp",
-            "/images/mattresses/semiortopedico-negro-4.webp"
-        ],
+        "images": shuffleImages( blackSemiOrthopedicMattresses ),
         "price": 680000,
         "sizes": "140cm x 190cm",
         "slug": "colchon-doble-original-negro-140cm-x-190cm-x-20cm",
@@ -264,12 +226,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/semiortopedico-negro-1.webp",
-            "/images/mattresses/semiortopedico-negro-2.webp",
-            "/images/mattresses/semiortopedico-negro-3.webp",
-            "/images/mattresses/semiortopedico-negro-4.webp"
-        ],
+        "images": shuffleImages( blackSemiOrthopedicMattresses ),
         "price": 750000,
         "sizes": "160cm x 190cm",
         "slug": "colchon-queen-original-negro-160cm-x-190cm-x-20cm",
@@ -281,6 +238,127 @@ const mattresses: Product[] = [
             "calidad"
         ],
         "title": "Colchón Queen Original Banda Negra - 160cm x 190cm x 20cm",
+        "type": "mattresses"
+    },
+    {
+        "id": uuid(),
+        "description": [
+            "Experimenta la sensación de dormir en las nubes con nuestro Colchón Cassata.",
+            "Diseñado meticulosamente para brindarte un confort inigualable, cada noche será un descanso reparador que te revitalizará para enfrentar cada día con energía renovada."
+        ],
+        "aboutThisProduct": [
+            "Capa Superior de Espuma de Alta Densidad",
+            "Postura adecuada durante el sueño",
+            "Alivia la presión en las articulaciones",
+            "El colchón minimiza la transferencia de movimiento",
+            "Garantía de devolución del dinero",
+            "Garantía extendida que cubre el colchón contra defectos de fabricación",
+            "Núcleo de Espuma de Soporte de Alta Resiliencia"
+        ],
+        "images": shuffleImages( cassataClinicalMattresses ),
+        "price": 980000,
+        "sizes": "100cm x 190cm",
+        "slug": "colchon-sencillo-cassata-100cm-x-190cm-x-30cm",
+        "tags": [
+            "ergonomico",
+            "premium",
+            "hipoalergenico",
+            "durabilidad",
+            "transpirable",
+            "confort"
+        ],
+        "title": "Colchón Sencillo Cassata - 100cm x 190cm x 30cm",
+        "type": "mattresses"
+    },
+    {
+        "id": uuid(),
+        "description": [
+            "Nuestro Colchón Cassata es la culminación de la ingeniería de precisión y la artesanía experta.",
+            "Disfruta de un soporte ergonómico que se adapta a la forma de tu cuerpo, aliviando los puntos de presión, mientras te acunas en una capa de suavidad que te envuelve en un abrazo reconfortante."
+        ],
+        "aboutThisProduct": [
+            "Capa Superior de Espuma de Alta Densidad",
+            "Postura adecuada durante el sueño",
+            "Alivia la presión en las articulaciones",
+            "El colchón minimiza la transferencia de movimiento",
+            "Garantía de devolución del dinero",
+            "Garantía extendida que cubre el colchón contra defectos de fabricación",
+            "Núcleo de Espuma de Soporte de Alta Resiliencia"
+        ],
+        "images": shuffleImages( cassataClinicalMattresses ),
+        "price": 1050000,
+        "sizes": "120cm x 190cm",
+        "slug": "colchon-semidoble-cassata-120cm-x-190cm-x-30cm",
+        "tags": [
+            "ergonomico",
+            "premium",
+            "hipoalergenico",
+            "durabilidad",
+            "transpirable",
+            "confort"
+        ],
+        "title": "Colchón Semidoble Cassata - 120cm x 190cm x 30cm",
+        "type": "mattresses"
+    },
+    {
+        "id": uuid(),
+        "description": [
+            "El Colchón Cassata no solo te ofrece una noche de sueño excepcional, sino que también está construido para durar.",
+            "Los materiales de alta calidad y la fabricación experta garantizan que disfrutarás de este colchón durante años, manteniendo su forma y rendimiento como el primer día."
+        ],
+        "aboutThisProduct": [
+            "Capa Superior de Espuma de Alta Densidad",
+            "Postura adecuada durante el sueño",
+            "Alivia la presión en las articulaciones",
+            "El colchón minimiza la transferencia de movimiento",
+            "Garantía de devolución del dinero",
+            "Garantía extendida que cubre el colchón contra defectos de fabricación",
+            "Núcleo de Espuma de Soporte de Alta Resiliencia"
+        ],
+        "images": shuffleImages( cassataClinicalMattresses ),
+        "price": 1250000,
+        "sizes": "140cm x 190cm",
+        "slug": "colchon-doble-cassata-140cm-x-190cm-x-30cm",
+        "tags": [
+            "ergonomico",
+            "premium",
+            "hipoalergenico",
+            "durabilidad",
+            "transpirable",
+            "confort"
+        ],
+        "title": "Colchón Doble Cassata - 140cm x 190cm x 30cm",
+        "type": "mattresses"
+    },
+    {
+        "id": uuid(),
+        "description": [
+            "En nuestra tienda en línea, creemos que el lujo no debería ser inalcanzable.",
+            "Por eso, ofrecemos el Colchón Cassata al mejor precio del mercado sin comprometer la calidad.",
+            "Disfruta de la opulencia y el confort que mereces, sin romper tu presupuesto."
+        ],
+        "aboutThisProduct": [
+            "Capa Superior de Espuma de Alta Densidad",
+            "Postura adecuada durante el sueño",
+            "Alivia la presión en las articulaciones",
+            "El colchón minimiza la transferencia de movimiento",
+            "Garantía de devolución del dinero",
+            "Garantía extendida que cubre el colchón contra defectos de fabricación",
+            "Núcleo de Espuma de Soporte de Alta Resiliencia"
+        ],
+        "images": shuffleImages( cassataClinicalMattresses ),
+        "price": 1580000,
+        "sizes": "160cm x 190cm",
+        "slug": "colchon-queen-cassata-160cm-x-190cm-x-30cm",
+        "tags": [
+            "ergonomico",
+            "premium",
+            "hipoalergenico",
+            "durabilidad",
+            "transpirable",
+            "confort"
+        ],
+        "title": "Colchón Queen Cassata - 160cm x 190cm x 30cm",
         "type": "mattresses"
     },
     {
@@ -299,14 +377,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/super-pillow-1.webp",
-            "/images/mattresses/super-pillow-2.webp",
-            "/images/mattresses/super-pillow-3.webp",
-            "/images/mattresses/super-pillow-4.webp",
-            "/images/mattresses/super-pillow-5.webp",
-            "/images/mattresses/super-pillow-6.webp"
-        ],
+        "images": shuffleImages( superPillowTopMattresses ),
         "price": 980000,
         "sizes": "100cm x 190cm",
         "slug": "colchon-sencillo-super-pillow-100cm-x-190cm-x-35cm",
@@ -337,14 +408,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/super-pillow-1.webp",
-            "/images/mattresses/super-pillow-2.webp",
-            "/images/mattresses/super-pillow-3.webp",
-            "/images/mattresses/super-pillow-4.webp",
-            "/images/mattresses/super-pillow-5.webp",
-            "/images/mattresses/super-pillow-6.webp"
-        ],
+        "images": shuffleImages( superPillowTopMattresses ),
         "price": 1050000,
         "sizes": "120cm x 190cm",
         "slug": "colchon-semidoble-super-pillow-120cm-x-190cm-x-35cm",
@@ -375,14 +439,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/super-pillow-1.webp",
-            "/images/mattresses/super-pillow-2.webp",
-            "/images/mattresses/super-pillow-3.webp",
-            "/images/mattresses/super-pillow-4.webp",
-            "/images/mattresses/super-pillow-5.webp",
-            "/images/mattresses/super-pillow-6.webp"
-        ],
+        "images": shuffleImages( superPillowTopMattresses ),
         "price": 1150000,
         "sizes": "140cm x 190cm",
         "slug": "colchon-doble-super-pillow-140cm-x-190cm-x-35cm",
@@ -413,14 +470,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/super-pillow-1.webp",
-            "/images/mattresses/super-pillow-2.webp",
-            "/images/mattresses/super-pillow-3.webp",
-            "/images/mattresses/super-pillow-4.webp",
-            "/images/mattresses/super-pillow-5.webp",
-            "/images/mattresses/super-pillow-6.webp"
-        ],
+        "images": shuffleImages( superPillowTopMattresses ),
         "price": 1320000,
         "sizes": "160cm x 190cm",
         "slug": "colchon-queen-super-pillow-160cm-x-190cm-x-35cm",
@@ -451,13 +501,7 @@ const mattresses: Product[] = [
             "Diseñado para resistir la acumulación de ácaros y alérgenos",
             "Garantía de satisfacción"
         ],
-        "images": [
-            "/images/mattresses/plegable-1.webp",
-            "/images/mattresses/plegable-2.webp",
-            "/images/mattresses/plegable-3.webp",
-            "/images/mattresses/plegable-4.webp",
-            "/images/mattresses/plegable-5.webp"
-        ],
+        "images": shuffleImages( premiumFoldingSuperPillowsMattresses ),
         "price": 2850000,
         "sizes": "200cm x 200cm",
         "slug": "colchon-king-super-pillow-plegable-200cm-x-200cm-x-40cm",

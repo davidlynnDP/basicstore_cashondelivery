@@ -77,6 +77,10 @@
     width: 30px;
 }
 
+.img_icon:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width:750px){
 
     .ct_categories {
