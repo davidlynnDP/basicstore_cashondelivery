@@ -24,7 +24,7 @@ export const Navbar = () => {
 
     <header className={ styles.ct_nav }>
       <figure className={ styles.fg_logo } onClick={ () => push('/') }>
-        <img src="/icons/cloud.svg" alt="" className={ styles.img_logo } />
+        <img src="/icons/logo.svg" alt="" className={ styles.img_logo } />
       </figure>
 
       {/* categorias */}
