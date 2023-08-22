@@ -258,7 +258,7 @@ const mattresses: Product[] = [
         "images": shuffleImages( cassataClinicalMattresses ),
         "price": 980000,
         "sizes": "100cm x 190cm",
-        "slug": "colchon-sencillo-cassata-100cm-x-190cm-x-30cm",
+        "slug": "colchon-sencillo-cassata-100cm-x-190cm-x-20cm",
         "tags": [
             "ergonomico",
             "premium",
@@ -267,7 +267,7 @@ const mattresses: Product[] = [
             "transpirable",
             "confort"
         ],
-        "title": "Colchón Sencillo Cassata - 100cm x 190cm x 30cm",
+        "title": "Colchón Sencillo Cassata - 100cm x 190cm x 20cm",
         "type": "mattresses"
     },
     {
@@ -288,7 +288,7 @@ const mattresses: Product[] = [
         "images": shuffleImages( cassataClinicalMattresses ),
         "price": 1050000,
         "sizes": "120cm x 190cm",
-        "slug": "colchon-semidoble-cassata-120cm-x-190cm-x-30cm",
+        "slug": "colchon-semidoble-cassata-120cm-x-190cm-x-20cm",
         "tags": [
             "ergonomico",
             "premium",
@@ -297,7 +297,7 @@ const mattresses: Product[] = [
             "transpirable",
             "confort"
         ],
-        "title": "Colchón Semidoble Cassata - 120cm x 190cm x 30cm",
+        "title": "Colchón Semidoble Cassata - 120cm x 190cm x 20cm",
         "type": "mattresses"
     },
     {
@@ -318,7 +318,7 @@ const mattresses: Product[] = [
         "images": shuffleImages( cassataClinicalMattresses ),
         "price": 1250000,
         "sizes": "140cm x 190cm",
-        "slug": "colchon-doble-cassata-140cm-x-190cm-x-30cm",
+        "slug": "colchon-doble-cassata-140cm-x-190cm-x-20cm",
         "tags": [
             "ergonomico",
             "premium",
@@ -327,7 +327,7 @@ const mattresses: Product[] = [
             "transpirable",
             "confort"
         ],
-        "title": "Colchón Doble Cassata - 140cm x 190cm x 30cm",
+        "title": "Colchón Doble Cassata - 140cm x 190cm x 20cm",
         "type": "mattresses"
     },
     {
@@ -349,7 +349,7 @@ const mattresses: Product[] = [
         "images": shuffleImages( cassataClinicalMattresses ),
         "price": 1580000,
         "sizes": "160cm x 190cm",
-        "slug": "colchon-queen-cassata-160cm-x-190cm-x-30cm",
+        "slug": "colchon-queen-cassata-160cm-x-190cm-x-20cm",
         "tags": [
             "ergonomico",
             "premium",
@@ -358,7 +358,7 @@ const mattresses: Product[] = [
             "transpirable",
             "confort"
         ],
-        "title": "Colchón Queen Cassata - 160cm x 190cm x 30cm",
+        "title": "Colchón Queen Cassata - 160cm x 190cm x 20cm",
         "type": "mattresses"
     },
     {
@@ -380,7 +380,7 @@ const mattresses: Product[] = [
         "images": shuffleImages( superPillowTopMattresses ),
         "price": 980000,
         "sizes": "100cm x 190cm",
-        "slug": "colchon-sencillo-super-pillow-100cm-x-190cm-x-35cm",
+        "slug": "colchon-sencillo-super-pillow-100cm-x-190cm-x-30cm",
         "tags": [
             "confort",
             "garantia",
@@ -389,7 +389,7 @@ const mattresses: Product[] = [
             "comodidad",
             "calidad"
         ],
-        "title": "Colchón Sencillo Super Pillow - 100cm x 190cm x 35cm",
+        "title": "Colchón Sencillo Super Pillow - 100cm x 190cm x 30cm",
         "type": "mattresses"
     },
     {
@@ -411,7 +411,7 @@ const mattresses: Product[] = [
         "images": shuffleImages( superPillowTopMattresses ),
         "price": 1050000,
         "sizes": "120cm x 190cm",
-        "slug": "colchon-semidoble-super-pillow-120cm-x-190cm-x-35cm",
+        "slug": "colchon-semidoble-super-pillow-120cm-x-190cm-x-30cm",
         "tags": [
             "confort",
             "garantia",
@@ -420,7 +420,7 @@ const mattresses: Product[] = [
             "comodidad",
             "calidad"
         ],
-        "title": "Colchón Semidoble Super Pillow - 120cm x 190cm x 35cm",
+        "title": "Colchón Semidoble Super Pillow - 120cm x 190cm x 30cm",
         "type": "mattresses"
     },
     {
@@ -442,7 +442,7 @@ const mattresses: Product[] = [
         "images": shuffleImages( superPillowTopMattresses ),
         "price": 1150000,
         "sizes": "140cm x 190cm",
-        "slug": "colchon-doble-super-pillow-140cm-x-190cm-x-35cm",
+        "slug": "colchon-doble-super-pillow-140cm-x-190cm-x-30cm",
         "tags": [
             "confort",
             "garantia",
@@ -451,7 +451,7 @@ const mattresses: Product[] = [
             "comodidad",
             "calidad"
         ],
-        "title": "Colchón Doble Super Pillow - 140cm x 190cm x 35cm",
+        "title": "Colchón Doble Super Pillow - 140cm x 190cm x 30cm",
         "type": "mattresses"
     },
     {
@@ -473,7 +473,7 @@ const mattresses: Product[] = [
         "images": shuffleImages( superPillowTopMattresses ),
         "price": 1320000,
         "sizes": "160cm x 190cm",
-        "slug": "colchon-queen-super-pillow-160cm-x-190cm-x-35cm",
+        "slug": "colchon-queen-super-pillow-160cm-x-190cm-x-30cm",
         "tags": [
             "confort",
             "garantia",
@@ -482,7 +482,7 @@ const mattresses: Product[] = [
             "comodidad",
             "calidad"
         ],
-        "title": "Colchón Queen Super Pillow - 160cm x 190cm x 35cm",
+        "title": "Colchón Queen Super Pillow - 160cm x 190cm x 30cm",
         "type": "mattresses"
     },
     {
@@ -504,7 +504,7 @@ const mattresses: Product[] = [
         "images": shuffleImages( premiumFoldingSuperPillowsMattresses ),
         "price": 2850000,
         "sizes": "200cm x 200cm",
-        "slug": "colchon-king-super-pillow-plegable-200cm-x-200cm-x-40cm",
+        "slug": "colchon-king-super-pillow-plegable-200cm-x-200cm-x-30cm",
         "tags": [
             "lujo",
             "confort",
@@ -513,7 +513,7 @@ const mattresses: Product[] = [
             "garantia",
             "portabilidad"
         ],
-        "title": "Colchón King Super Pillow Plegable - 200cm x 200cm x 40cm",
+        "title": "Colchón King Super Pillow Plegable - 200cm x 200cm x 30cm",
         "type": "mattresses"
     }
 ]
