@@ -1,13 +1,13 @@
-import { useContext, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
 
 import { OrderSummary } from '@/components/cart';
-import { CartContext } from '@/context/cart';
 import { Divider } from '@/components/ui';
 import { formatCurrency } from '@/utils';
 
 import styles from '../../styles/CheckoutPage.module.css'
+import { useShoppingCart } from '@/hooks';
 
 
 type FormData = {
@@ -20,7 +20,7 @@ type FormData = {
 
 const CheckoutPage = () => {
     
-    const { isLoaded, cart, numberOfItems, total } = useContext( CartContext );
+  const { uploadedData, cart, order } = useShoppingCart(); 
     const router = useRouter();
 
     const { register, handleSubmit, formState: { errors }, getValues } = useForm<FormData>({
@@ -35,10 +35,10 @@ const CheckoutPage = () => {
 
 
     useEffect(() => {
-      if ( isLoaded && cart.length === 0 ){
+      if ( uploadedData && cart.length === 0 ){
         router.replace('/cart/empty');  
       }
-    }, [ isLoaded, cart, router ])
+    }, [ uploadedData, cart, router ])
 
     const formSubmit = ( data: FormData ) => {
 
@@ -54,8 +54,8 @@ const CheckoutPage = () => {
       - Email: ${ email }
       - Teléfono: ${ phone }
       - Método de Pago: ${ paymentmethod }
-      - Número de Items: *${ numberOfItems }*
-      - Total: *${ formatCurrency( total ) }*
+      - Número de Items: *${ order.numberOfItems }*
+      - Total: *${ formatCurrency( order.total ) }*
 
       Productos:
       ${ cart.map( ( product, index ) => `${ index + 1 }. ${ product.title } - *${ formatCurrency( product.price ) }*`).join('\n')}

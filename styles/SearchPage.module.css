@@ -1,0 +1,31 @@
+
+.ct_found {
+
+    width: 100%;
+    height: 150px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.pg_success {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+
+    color: rgb(0, 100, 0);
+
+}
+
+.pg_404 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+
+    color: rgb(100, 0, 0);
+}

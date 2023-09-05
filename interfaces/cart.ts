@@ -1,7 +1,7 @@
 import { ValidSizes, ValidTypes } from './products';
 
 
-// de esta manera luce un unico producto en el carrito de compras
+//* unico producto en el carrito de compras
 export interface ICartProduct {
     id: string;
     image: string;
@@ -14,14 +14,13 @@ export interface ICartProduct {
     quantity: number;   // hace referencia a cuantos productos estamos llevando en el carrito de compras
 }
 
+//* orden completa en el carrito de compras
 export interface IOrder {
-    _id? : string;
+    transactionId?: string;
     orderItems: ICartProduct[];
 
     numberOfItems: number;
     subTotal     : number;
     tax          : number;
-    total        : number;
-
-    transactionId?: string;
+    total        : number;   
 }

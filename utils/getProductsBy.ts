@@ -1,5 +1,6 @@
 import { beds, mattresses } from '@/data';
 import { Product } from '@/interfaces';
+import { shuffle } from 'underscore';
 
 
 
@@ -28,7 +29,34 @@ const getMattressBySlug = async( slug: string ): Promise<Product | null> => {
 }
 
 
+const getProductsByTerm = async( term: string ): Promise<Product[]> => {
+    
+    const finishTerm = validTermFn( term ); 
+
+    const allProducts = [ ...mattresses, ...beds ];
+    return allProducts.filter( product => product.slug.includes( finishTerm ));
+}
+
+
+const getAllProducts = async(): Promise<Product[]> => {
+
+    const allProducts = shuffle([ ...mattresses, ...beds ]);
+    return allProducts.slice(0, 12);
+}
+
+
+const validTermFn = ( term: string ): string => {
+
+    return term.toLowerCase().replaceAll(' ', '-');
+}
+
+
+
 export {
     getBedBySlug,
-    getMattressBySlug
+    getMattressBySlug,
+    getProductsByTerm,
+    getAllProducts,
+
+    validTermFn
 }

@@ -1,24 +1,25 @@
 import { createContext } from 'react';
+import { createOrderReturn } from './';
 import { ICartProduct } from '@/interfaces/cart';
-import { ResponseOrder } from './';
 
 
-//Cambiar - [numberOfItems - subTotal - tax - total] por order: IOrder
 interface ContextProps {
-    isLoaded: boolean;
-    cart: ICartProduct[]; 
+    transactionId?: string;
+    uploadedData: boolean;
+    orderItems: ICartProduct[];
+
     numberOfItems: number;
-    subTotal: number;
-    tax: number;
-    total: number;
+    subTotal     : number;
+    tax          : number;
+    total        : number;   
 
     // Methods
-    addProductToCart: (product: ICartProduct) => void;  
+    addProductToCart: (product: ICartProduct) => void; 
     updateCartQuantity: (product: ICartProduct) => void;
     removeCartProduct: (product: ICartProduct) => void;
 
     // Orders
-    createOrder: () => ResponseOrder;
+    createOrder: () => createOrderReturn;
 }
 
 

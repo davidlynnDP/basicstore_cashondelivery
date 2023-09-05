@@ -6,20 +6,21 @@ import { ShoppingList, OrderSummary } from '@/components/cart';
 import { RootLayout } from '@/components/layouts/RootLayout';
 
 import styles from '../../styles/CartPage.module.css'
+import { useShoppingCart } from '@/hooks';
 
 
 const CartPage = () => {
-
-    const { isLoaded, cart } = useContext( CartContext );
+  
     const router = useRouter();
+    const { uploadedData, cart } = useShoppingCart(); 
 
     useEffect(() => {
-      if ( isLoaded && cart.length === 0 ){
+      if ( uploadedData && cart.length === 0 ){
         router.replace('/cart/empty');  
       }
-    }, [ isLoaded, cart, router ])
+    }, [ uploadedData, cart, router ])
     
-    if ( !isLoaded || cart.length === 0 ) {
+    if ( !uploadedData || cart.length === 0 ) {
         return (<></>);
     }
 

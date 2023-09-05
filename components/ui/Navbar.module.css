@@ -63,8 +63,25 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
 }
+
+.input {
+    width: 200px;
+    height: 35px;
+    background: transparent;
+    padding: 0 10px;
+
+    border: 2px solid black;
+    border-radius: 5px;
+
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    overflow: hidden;
+}
+
 
 .fg_icon {
     justify-self: flex-end;
@@ -81,14 +98,21 @@
     cursor: pointer;
 }
 
-@media screen and (max-width:750px){
+@media screen and (max-width:1050px){
+
+    .input {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:900px){
 
     .ct_categories {
         display: none;
     }
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:450px){
 
     .ct_funcs {
         display: none;

@@ -1,15 +1,16 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 
 import { Product } from '@/interfaces'
-import { formatCurrency, getMattressBySlug } from '@/utils'
+import { formatCurrency, getBy } from '@/utils'
 import { ProductContainer } from '@/components/ui'
 import { ResponsiveCarousel } from '@/components/carousel/ResponsiveCarousel'
-import { CartContext } from '@/context/cart'
 import { useRouter } from 'next/router'
 import { ICartProduct } from '@/interfaces/cart'
 import { mattresses } from '@/data'
 import { RootLayout } from '@/components/layouts/RootLayout'
+import { useShoppingCart } from '@/hooks'
+
 
 import styles from '../../styles/BedsAndMattressesBySlug.module.css'
 
@@ -22,7 +23,7 @@ const MattressesBySlugPage: NextPage<Props> = ({ product }) => {
 
     const router = useRouter();
 
-    const { addProductToCart } = useContext( CartContext )
+    const { addProductToCart } = useShoppingCart(); 
 
     const [tempCartProduct, setTempCartProduct] = useState<ICartProduct>({
       id: product.id,
@@ -109,7 +110,7 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const { slug } = params as { slug: string };
-    const product = await getMattressBySlug( slug );
+    const product = await getBy.getMattressBySlug( slug );
 
     if ( !product ) {
         return {

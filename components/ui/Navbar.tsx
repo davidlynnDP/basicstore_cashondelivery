@@ -1,12 +1,19 @@
+import { useContext, useState } from 'react';
 import { useRouter } from 'next/router'
+
 import styles from './Navbar.module.css'
-import { useContext } from 'react';
 import { CartContext } from '@/context/cart';
+import { getBy } from '@/utils';
+
+interface FormData {
+  searchterm: string,
+}
 
 export const Navbar = () => {
 
   const { push } = useRouter();
   const { cart } = useContext( CartContext );
+  const [ searchTerm, setSearchTerm ] = useState('');
 
   const navigateCart = () => {
     if ( cart.length === 0 ) {
@@ -17,7 +24,11 @@ export const Navbar = () => {
     push('/cart'); 
   }
 
-  
+
+  const onSearchTerm = () => {
+    if( searchTerm.trim().length === 0 ) return; 
+    push(`/search/${ getBy.validTermFn( searchTerm ) }`); 
+  }
 
 
   return (
@@ -34,6 +45,16 @@ export const Navbar = () => {
       </div>
 
       <div className={ styles.ct_funcs }>
+
+        <input 
+          type="text" 
+          id='searchterm'
+          placeholder='¿buscas algo específico?'
+          onChange={  (e) => setSearchTerm( e.target.value ) } 
+          onKeyDown={ (e) => e.key === 'Enter' ? onSearchTerm() : null }
+          className={ styles.input }
+        />
+
         <figure className={ styles.fg_icon }>
           <img src="/icons/shopping-cart.svg" alt="Shopping cart icon" className={ styles.img_icon } onClick={ () => navigateCart() } />
         </figure> 

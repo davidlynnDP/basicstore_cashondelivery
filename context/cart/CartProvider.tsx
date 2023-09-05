@@ -1,34 +1,36 @@
-import { useEffect, useReducer, PropsWithChildren } from 'react';
-import axios from 'axios';
+import React, { PropsWithChildren, useEffect, useReducer } from 'react';
+import { v4 as uuid } from 'uuid';
 
 import { CartContext, cartReducer } from './';
 import { ICartProduct, IOrder } from '@/interfaces/cart';
 
-
-export type ResponseOrder = { 
-  hasError: boolean, 
-  message: string,
-}
-
-
 export interface CartState {
-    isLoaded: boolean;
-    cart: ICartProduct[];
+    transactionId?: string;
+    uploadedData: boolean;
+    orderItems: ICartProduct[];
+
     numberOfItems: number;
-    subTotal: number;
-    tax: number;
-    total: number;
+    subTotal     : number;
+    tax          : number;
+    total        : number;   
 }
 
 const CART_INITIAL_STATE: CartState = {
-    isLoaded: false,
-    cart: [],
+    transactionId: undefined,
+    uploadedData: false,
+    orderItems: [],
+
     numberOfItems: 0,
-    subTotal: 0,
-    tax: 0,
-    total: 0,
+    subTotal     : 0,
+    tax          : 0,
+    total        : 0,   
 }
 
+
+export interface createOrderReturn {
+    hasError: boolean;
+    order: IOrder | null;
+}
 
 export const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
@@ -36,67 +38,68 @@ export const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
     useEffect(() => {
         try {
-            const cookieProducts = localStorage.getItem('cart') ? JSON.parse( localStorage.getItem('cart')! ): [] 
-            dispatch({ type: '[Cart] - LoadCart from cookies | storage', payload: cookieProducts });
+            const storageProducts = localStorage.getItem('cart') ? JSON.parse( localStorage.getItem('cart')! ): [] 
+            dispatch({ type: '[Cart] - LoadCart from cookies | storage', payload: storageProducts });
         } catch (error) {
             dispatch({ type: '[Cart] - LoadCart from cookies | storage', payload: [] });
         }
     }, []);
 
+    useEffect(() => {
+      localStorage.setItem('cart', JSON.stringify( state.orderItems ));  
+    }, [state.orderItems]);
+
 
     useEffect(() => {
-        localStorage.setItem('cart', JSON.stringify( state.cart )); 
-    }, [ state.cart ]);
-
-    useEffect(() => {
-        const numberOfItems = state.cart.reduce( ( prev, current ) => current.quantity + prev , 0 );  
-    
-        const subTotal = state.cart.reduce( ( prev, current ) => (current.price * current.quantity) + prev, 0 );
-        const taxRate =  Number( process.env.NEXT_PUBLIC_TAX_RATE || 0 ); 
+        const numberOfItems = state.orderItems.reduce( ( prev, current ) => current.quantity + prev , 0 );  
+        const subTotal = state.orderItems.reduce( ( prev, current ) => (current.price * current.quantity) + prev, 0 );
+        const taxRate =  Number( /* variable de entorno || */ 0 ); 
     
         const orderSummary = {
             numberOfItems,
             subTotal,
             tax: subTotal * taxRate,
-            total: subTotal + taxRate 
+            total: subTotal + taxRate  
         }
 
         dispatch({ type: '[Cart] - Update order summary', payload: orderSummary });
-    }, [ state.cart ]);
-
+    }, [state.orderItems]);
 
 
     const addProductToCart = ( product: ICartProduct ) => {
 
+        const productInCart = state.orderItems.some( p => p.id === product.id );
+        if ( !productInCart ) return dispatch({ type: '[Cart] - Update products in cart', payload: [ ...state.orderItems, product ] })
 
-
-        const productInCart = state.cart.some( p => p.id === product.id ); 
-        if ( !productInCart ) return dispatch({ type: '[Cart] - Update products in cart', payload: [...state.cart, product ] }) 
-
-        const updatedProducts = state.cart.map( p => {
+        //*Acumulacion
+        const updatedProducts = state.orderItems.map( p => {
             if ( p.id !== product.id ) return p;  
-            p.quantity += product.quantity; 
+
+            //*Actualizar la cantidad
+            p.quantity += product.quantity;
             return p;
         });
 
         dispatch({ type: '[Cart] - Update products in cart', payload: updatedProducts });
     }
 
+
     const updateCartQuantity = ( product: ICartProduct ) => {
         dispatch({ type: '[Cart] - Change cart quantity', payload: product });
     }
+
 
     const removeCartProduct = ( product: ICartProduct ) => {
         dispatch({ type: '[Cart] - Remove product in cart', payload: product });
     }
 
 
-    const createOrder = (): ResponseOrder => {
+    const createOrder = (): createOrderReturn => {
 
-        const body: IOrder = {
-            orderItems: state.cart.map( p => ({
+        const purchaseOrder: IOrder = {
+            transactionId: uuid(),
+            orderItems: state.orderItems.map( p => ({
                 ...p,
-                size: p.size!  
             })),
             numberOfItems: state.numberOfItems,
             subTotal: state.subTotal,
@@ -106,22 +109,18 @@ export const CartProvider: React.FC<PropsWithChildren> = ({ children }) => {
 
         try {
             
-            //falta dispatch
             dispatch({ type: '[Cart] - Order complete' });
-
             return {
                 hasError: false,
-                message: ''
+                order: purchaseOrder,
             }
 
-
-        } catch (error) {
+        } catch ( error ) {
             return {
                 hasError: true,
-                message : 'Error no controlado, hable con el administrador'
+                order: null,
             }
         }
-
     }
 
 

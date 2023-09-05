@@ -1,5 +1,5 @@
 
 
 
-export { getBedBySlug, getMattressBySlug } from './getProductsBy'
+export * as getBy from './getProductsBy'
 export { formatCurrency } from './formatCurrency'

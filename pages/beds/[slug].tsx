@@ -2,7 +2,7 @@ import { NextPage, GetStaticPaths, GetStaticProps } from 'next'
 import { useContext, useState } from 'react'
 
 import { Product } from '@/interfaces'
-import { formatCurrency, getBedBySlug } from '@/utils'
+import { formatCurrency, getBy } from '@/utils'
 import { ResponsiveCarousel } from '@/components/carousel/ResponsiveCarousel'
 import { ProductContainer } from '@/components/ui/ProductContainer'
 import { ICartProduct } from '@/interfaces/cart'
@@ -12,6 +12,7 @@ import { beds } from '@/data'
 import { RootLayout } from '@/components/layouts/RootLayout'
 
 import styles from '../../styles/BedsAndMattressesBySlug.module.css'
+import { useShoppingCart } from '@/hooks'
 
 interface Props {
   product: Product,
@@ -23,7 +24,7 @@ const BedsBySlugPage: NextPage<Props> = ({ product }) => {
     
     const router = useRouter();
 
-    const { addProductToCart } = useContext( CartContext )
+    const { addProductToCart } = useShoppingCart(); 
 
     const [tempCartProduct, setTempCartProduct] = useState<ICartProduct>({
       id: product.id,
@@ -111,7 +112,7 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const { slug } = params as { slug: string };
-    const product = await getBedBySlug( slug );
+    const product = await getBy.getBedBySlug( slug );
 
     if ( !product ) {
         return {
