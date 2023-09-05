@@ -1,7 +1,6 @@
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-import { CartContext } from '@/context/cart';
 import { ShoppingList, OrderSummary } from '@/components/cart';
 import { RootLayout } from '@/components/layouts/RootLayout';
 

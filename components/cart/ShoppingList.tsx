@@ -36,9 +36,9 @@ export const ShoppingList: React.FC<Props> = ({ product }) => {
 
         <div className={ styles.ct_info }>
           <h2 className={ styles.title }>{ product.title }</h2>
-          <h3 className={ styles.price }>{ formatCurrency( product.price ) }</h3>
+          <h3 className={ styles.price }>Precio Unitario: { formatCurrency( product.price ) }</h3>
           <p className={ styles.size }>{ product.size }</p>
-          <p className={ styles.quantity }>Cantidad { product.quantity }</p>
+          <p className={ styles.quantity }>Cantidad: { product.quantity }</p>
         </div>
       </div>
 

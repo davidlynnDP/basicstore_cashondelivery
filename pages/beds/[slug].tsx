@@ -6,13 +6,13 @@ import { formatCurrency, getBy } from '@/utils'
 import { ResponsiveCarousel } from '@/components/carousel/ResponsiveCarousel'
 import { ProductContainer } from '@/components/ui/ProductContainer'
 import { ICartProduct } from '@/interfaces/cart'
-import { CartContext } from '@/context/cart'
 import { useRouter } from 'next/router'
 import { beds } from '@/data'
 import { RootLayout } from '@/components/layouts/RootLayout'
 
 import styles from '../../styles/BedsAndMattressesBySlug.module.css'
 import { useShoppingCart } from '@/hooks'
+import { ItemCounter } from '@/components/ui'
 
 interface Props {
   product: Product,
@@ -39,7 +39,6 @@ const BedsBySlugPage: NextPage<Props> = ({ product }) => {
     })
 
 
-    //* Despues se puede implementar
     const onUpdateQuantity = ( quantity: number ) => {
       setTempCartProduct( currentProduct => ({
         ...currentProduct,
@@ -71,6 +70,8 @@ const BedsBySlugPage: NextPage<Props> = ({ product }) => {
                     }
                     <div className={ styles.price }>{ formatCurrency( product.price ) }</div>
                     <div className={ styles.sizes }>{ product.sizes }</div>
+
+                    <ItemCounter currentValue={ tempCartProduct.quantity } maxValue={ 5 } updatedQuantity={ onUpdateQuantity }/>
                 </div>
 
                 <div className={ styles.ct_buy }>

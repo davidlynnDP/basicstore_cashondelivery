@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import { Product } from '@/interfaces'
 import { formatCurrency, getBy } from '@/utils'
-import { ProductContainer } from '@/components/ui'
+import { ItemCounter, ProductContainer } from '@/components/ui'
 import { ResponsiveCarousel } from '@/components/carousel/ResponsiveCarousel'
 import { useRouter } from 'next/router'
 import { ICartProduct } from '@/interfaces/cart'
@@ -37,8 +37,6 @@ const MattressesBySlugPage: NextPage<Props> = ({ product }) => {
       quantity: 1,
     })
 
-
-    //* Despues se puede implementar
     const onUpdateQuantity = ( quantity: number ) => {
       setTempCartProduct( currentProduct => ({
         ...currentProduct,
@@ -70,6 +68,8 @@ const MattressesBySlugPage: NextPage<Props> = ({ product }) => {
                   }
                   <div className={ styles.price }>{ formatCurrency( product.price ) }</div>
                   <div className={ styles.sizes }>{ product.sizes }</div>
+
+                  <ItemCounter currentValue={ tempCartProduct.quantity } maxValue={ 5 } updatedQuantity={ onUpdateQuantity }/>
               </div>
 
               <div className={ styles.ct_buy }>
