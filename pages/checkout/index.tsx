@@ -20,7 +20,7 @@ type FormData = {
 
 const CheckoutPage = () => {
     
-  const { uploadedData, cart, order } = useShoppingCart(); 
+  const { uploadedData, cart, order, createOrder } = useShoppingCart(); 
     const router = useRouter();
 
     const { register, handleSubmit, formState: { errors }, getValues } = useForm<FormData>({
@@ -42,6 +42,10 @@ const CheckoutPage = () => {
 
     const formSubmit = ( data: FormData ) => {
 
+      const recentOrder = createOrder();
+
+      if ( !recentOrder.order?.transactionId ) return;
+      
       const names = getValues('names');
       const surnames = getValues('surnames');
       const email = getValues('email');
@@ -58,7 +62,7 @@ const CheckoutPage = () => {
       - Total: *${ formatCurrency( order.total ) }*
 
       Productos:
-      ${ cart.map( ( product, index ) => `${ index + 1 }. ${ product.title } - *${ formatCurrency( product.price ) }*`).join('\n')}
+      ${ cart.map( ( product, index ) => `* *Cantidad: ${ product.quantity }* - ${ product.title } - *${ formatCurrency( product.price ) }*`).join('\n')}
 
       *¡Espero tu respuesta para finalizar mi compra!*
       `;

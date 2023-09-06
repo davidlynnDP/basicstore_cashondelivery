@@ -2,11 +2,21 @@
 import { RootLayout } from '@/components/layouts/RootLayout'
 import styles from '../styles/ThanksPage.module.css'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react';
+import { useShoppingCart } from '@/hooks';
 
 
 const ThanksPage = () => {
 
-    const router = useRouter()
+  const router = useRouter();
+  const { order } = useShoppingCart(); 
+
+  useEffect(() => {
+    if ( !order.transactionId ){
+      router.replace('/cart/empty');  
+    }
+  }, [ order, router ])
+  
   return (
 
     <RootLayout>
