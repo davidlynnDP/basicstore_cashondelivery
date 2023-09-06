@@ -9,13 +9,19 @@ import { useShoppingCart } from '@/hooks';
 const ThanksPage = () => {
 
   const router = useRouter();
-  const { order } = useShoppingCart(); 
+  const { order, cart } = useShoppingCart(); 
 
   useEffect(() => {
-    if ( !order.transactionId ){
+    if ( !order.transactionId && cart.length === 0 ){
       router.replace('/cart/empty');  
+      return;
     }
-  }, [ order, router ])
+
+    if ( !order.transactionId ){
+      router.replace('/cart');  
+      return;
+    }
+  }, [ order, cart, router ])
   
   return (
 
