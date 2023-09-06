@@ -4,7 +4,6 @@ import { shuffle } from 'underscore';
 import { RootLayout } from '@/components/layouts/RootLayout'
 import { Product } from '@/interfaces'
 import { CardProduct, GridContainer } from '@/components/ui';
-import { gistApi } from '@/api';
 import { mattresses, beds } from '@/data';
 
 interface Props {
