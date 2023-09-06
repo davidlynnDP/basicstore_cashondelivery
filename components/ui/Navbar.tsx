@@ -4,15 +4,13 @@ import { useRouter } from 'next/router'
 import styles from './Navbar.module.css'
 import { CartContext } from '@/context/cart';
 import { getBy } from '@/utils';
+import { useShoppingCart } from '@/hooks';
 
-interface FormData {
-  searchterm: string,
-}
 
 export const Navbar = () => {
 
   const { push } = useRouter();
-  const { cart } = useContext( CartContext );
+  const { cart } = useShoppingCart();
   const [ searchTerm, setSearchTerm ] = useState('');
 
   const navigateCart = () => {
